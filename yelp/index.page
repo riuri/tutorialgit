@@ -7,6 +7,10 @@
     <email>riuri@rocketmail.com</email>
     <years>2013</years>
   </credit>
+  <desc>Um pequeno tutorial para usar o git para backups de códigos na EDROM.</desc>
 </info>
 <title>Mini Tutorial de git</title>
+<section id="sozinho">
+<title>Trabalhando Sozinho</title>
+</section>
 </page>

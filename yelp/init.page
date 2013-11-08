@@ -1,0 +1,21 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="init">
+<info>
+  <link type="guide" xref="index#sozinho"/>
+  <desc>Antes de utilizar o git, deve-se criar um repositório para que ele acompanhe os arquivos</desc>
+</info>
+<title>Iniciando um repositório git</title>
+<p>
+Para criar um repositório e o git começar a acompanhar os arquivos do diretório,faça o seguinte:
+</p>
+<steps>
+<item><p>Vá para esse diretório (com <cmd>cd <var>diretório</var></cmd>).</p></item>
+<item><p>Digite <cmd>git init</cmd></p>
+<screen>
+$ <input>git init</input>
+<output>Initialized empty Git repository in <var>diretório</var>/.git/</output>
+</screen>
+</item>
+</steps>
+</page>
