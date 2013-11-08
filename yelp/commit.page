@@ -1,0 +1,51 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="commit">
+<info>
+  <!--link type="guide" xref="index#sozinho"/-->
+  <desc>A cada mudança relevante, um commit</desc>
+  <!--link type="next" xref="add" /-->
+</info>
+<title>Dando commit em mudanças</title>
+<p>A cada pequena mudança relevante, é interessante dar um commit. O commit é uma espécie de backup dos arquivos no stage. O stage é uma espécie de cache das modificações que serão preservadas pelo git.
+</p>
+<links type="section"/>
+<section id="comum">
+<title>Crie/modifique arquivos</title>
+<p>Crie, sei lá, um hello, world.</p>
+<listing>
+<title><file>hello.cpp</file></title>
+<code><![CDATA[
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	cout << "Olá, mundo!" << endl;
+	return 0;
+}]]></code>
+</listing>
+</section>
+<section id="terminal">
+<title>Modo terminal</title>
+<steps>
+<item><p>Digite <cmd>git add <var>hello.cpp</var></cmd> ou, em vez de <var>hello.cpp</var>, o(s) nome(s) do(s) arquivos a colocar no stage.</p>
+<note><p><cmd>git add .</cmd> adiciona todos os arquivos do diretório</p></note>
+</item>
+<item><p>Opcionalmente, modifique mais o arquivo e coloque as mudanças no stage com <cmd>git add</cmd>.</p></item>
+<item><p>Digite <cmd>git commit -m "<var>Mensagem de commit</var>"</cmd>. Essa mensagem deve descrever, em uma linha, as mudanças realizadas.</p></item>
+</steps>
+</section>
+<section id="gitg">
+<title>Modo gráfico com gitg</title>
+<p>
+Com o <app>gitg</app> aberto, faça o seguinte:
+</p>
+<steps>
+<item><p>Clique na aba <gui style="tab">Commit</gui>.</p></item>
+<item><p>Arraste os arquivos de <gui>Unstaged</gui> para <gui>Staged</gui>.</p></item>
+<item><p>Opcionalmente, modifique mais o arquivo e coloque as mudanças no stage.</p></item>
+<item><p>Digite a mensagem de commit. Essa mensagem deve descrever, em uma linha, as mudanças realizadas. Se precisar, pule duas linhas e explique mais o que as mudanças fazem.</p></item>
+</steps>
+</section>
+</page>

@@ -4,7 +4,7 @@
 <info>
   <!--link type="guide" xref="index#sozinho"/-->
   <desc>Durante a utilização do git, é interessante acompanhar seu estado atual.</desc>
-  <link type="next" xref="add" />
+  <link type="next" xref="commit" />
 </info>
 <title>Checando o estado do repositório</title>
 <p>A qualquer momento, pode ser útil ver como anda o repositório (quais são os arquivos novos, os modificados etc). Então utilize um dos seguintes procedimentos:
