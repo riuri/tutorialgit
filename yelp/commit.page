@@ -34,7 +34,9 @@ int main()
 </item>
 <item><p>Opcionalmente, modifique mais o arquivo e coloque as mudanças no stage com <cmd>git add</cmd>.</p></item>
 <item><p>Digite <cmd>git commit -m "<var>Mensagem de commit</var>"</cmd>. Essa mensagem deve descrever, em uma linha, as mudanças realizadas.</p></item>
+<item><p>Pronto, suas mudanças estão preservadas para a posteridade.</p></item>
 </steps>
+<p>Repita o procedimento sempre que efetuar modificações.</p>
 </section>
 <section id="gitg">
 <title>Modo gráfico com gitg</title>
@@ -46,6 +48,8 @@ Com o <app>gitg</app> aberto, faça o seguinte:
 <item><p>Arraste os arquivos de <gui>Unstaged</gui> para <gui>Staged</gui>.</p></item>
 <item><p>Opcionalmente, modifique mais o arquivo e coloque as mudanças no stage.</p></item>
 <item><p>Digite a mensagem de commit. Essa mensagem deve descrever, em uma linha, as mudanças realizadas. Se precisar, pule duas linhas e explique mais o que as mudanças fazem.</p></item>
+<item><p>Por fim, clique no botão <gui style="button">Commit</gui> para preservar suas mudanças para a posteridade.</p></item>
 </steps>
+<p>Vale lembrar, repita o procedimento sempre que efetuar modificações.</p>
 </section>
 </page>

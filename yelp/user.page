@@ -1,0 +1,30 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="user">
+<info>
+  <!--link type="guide" xref="index#sozinho"/-->
+  <desc>Associe as mudanças a seu nome e e-mail.</desc>
+  <link type="next" xref="commit" />
+</info>
+<title>Colocando seu nome</title>
+<p>O git acompanha as mudanças e associa cada mudança a uma pessoa (nome e e-mail). Então, antes de começar a mexer nas coisas, deve-se primeiro colocar o nome.
+</p>
+<links type="section"/>
+<section id="terminal">
+<title>Modo terminal</title>
+<steps>
+<item><p>Digite <cmd>git config --global user.name "<var>Nome Completo</var>"</cmd> para mudar o nome.</p></item>
+<item><p>Digite <cmd>git config --global user.e-mail <var>user@exemplo.com</var></cmd> para mudar o e-mail.</p></item>
+</steps>
+<p>Agora você pode fazer suas modificações e dar os commits.</p>
+</section>
+<section id="gitg">
+<title>Modo gráfico com gitg</title>
+<steps>
+<item><p>Vá ao menu <gui style="menu">Editar</gui><gui style="menu">Preferências</gui>.</p></item>
+<item><p>Clique na aba <gui style="tab">Configuração</gui>.</p></item>
+<item><p>Digite seu nome completo e seu e-mail e clique <gui style="button">Fechar</gui>.</p></item>
+</steps>
+<p>Agora você pode fazer suas modificações e dar os commits.</p>
+</section>
+</page>
