@@ -1,0 +1,6 @@
+#!/bin/bash
+
+BACK="$(pwd)"
+cd "$(dirname $0)/html/"
+yelp-build html ../yelp/
+cd "$BACK"

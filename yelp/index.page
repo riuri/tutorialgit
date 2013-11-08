@@ -1,0 +1,12 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="guide"
+      id="index">
+<info>
+  <credit type="author">
+    <name>Iuri Rezende Souza</name>
+    <email>riuri@rocketmail.com</email>
+    <years>2013</years>
+  </credit>
+</info>
+<title>Mini Tutorial de git</title>
+</page>
