@@ -1,0 +1,25 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="status">
+<info>
+  <!--link type="guide" xref="index#sozinho"/-->
+  <desc>Durante a utilização do git, é interessante acompanhar seu estado atual.</desc>
+  <link type="next" xref="add" />
+</info>
+<title>Checando o estado do repositório</title>
+<p>A qualquer momento, pode ser útil ver como anda o repositório (quais são os arquivos novos, os modificados etc). Então utilize um dos seguintes procedimentos:
+</p>
+<links type="section"/>
+<section id="terminal">
+<title>Modo terminal</title>
+<p>
+Com o terminal no diretório acompanhado, digite <cmd>git status</cmd>.
+</p>
+</section>
+<section id="gitg">
+<title>Modo gráfico com gitg</title>
+<p>
+Com o terminal no diretório acompanhado, digite <cmd>gitg</cmd>.
+</p>
+</section>
+</page>

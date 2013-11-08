@@ -3,6 +3,7 @@
       id="init">
 <info>
   <link type="guide" xref="index#sozinho"/>
+  <link type="next"  xref="status"/>
   <desc>Antes de utilizar o git, deve-se criar um repositório para que ele acompanhe os arquivos</desc>
 </info>
 <title>Iniciando um repositório git</title>
