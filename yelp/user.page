@@ -21,10 +21,16 @@
 <section id="gitg">
 <title>Modo gráfico com gitg</title>
 <steps>
-<item><p>Vá ao menu <gui style="menu">Editar</gui><gui style="menu">Preferências</gui>.</p></item>
-<item><p>Clique na aba <gui style="tab">Configuração</gui>.</p></item>
+<item><p>Vá ao menu <guiseq><gui style="menu">Editar</gui><gui style="menu">Preferências</gui></guiseq>.</p></item>
+<item><p>Clique na aba <gui style="tab">Configuração</gui>.</p>
+</item>
 <item><p>Digite seu nome completo e seu e-mail e clique <gui style="button">Fechar</gui>.</p></item>
 </steps>
 <p>Agora você pode fazer suas modificações e dar os commits.</p>
+<figure>
+  <title>Aba <gui style="tab">Configuração</gui></title>
+  <desc>Eis a janela de configuração de usuário</desc>
+  <media type="image" src="telas/nome.png" />
+</figure>
 </section>
 </page>

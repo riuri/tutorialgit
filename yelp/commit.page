@@ -51,5 +51,10 @@ Com o <app>gitg</app> aberto, faça o seguinte:
 <item><p>Por fim, clique no botão <gui style="button">Commit</gui> para preservar suas mudanças para a posteridade.</p></item>
 </steps>
 <p>Vale lembrar, repita o procedimento sempre que efetuar modificações.</p>
+<figure>
+  <title>Janela de commit</title>
+  <desc>Eis um exemplo básico de janela de commit</desc>
+  <media type="image" src="telas/add.png" />
+</figure>
 </section>
 </page>
