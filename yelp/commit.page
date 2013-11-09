@@ -4,7 +4,7 @@
 <info>
   <!--link type="guide" xref="index#sozinho"/-->
   <desc>A cada mudança relevante, um commit</desc>
-  <!--link type="next" xref="add" /-->
+  <link type="next" xref="diff" />
 </info>
 <title>Dando commit em mudanças</title>
 <p>A cada pequena mudança relevante, é interessante dar um commit. O commit é uma espécie de backup dos arquivos no stage. O stage é uma espécie de cache das modificações que serão preservadas pelo git.

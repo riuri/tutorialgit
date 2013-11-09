@@ -1,0 +1,78 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="diff">
+<info>
+  <!--link type="guide" xref="index#sozinho"/-->
+  <desc>Experimente fazer edições e ver o que foi modificado antes do commit</desc>
+  <!--link type="next" xref="add" /-->
+</info>
+<title>Vendo diferenças</title>
+<p>Para este mini-tutorial, edite alguns arquivos e repita o procedimento de commit. Assim, poderemos ver mudanças ao adicionar arquivos ao stage.
+</p>
+<links type="section"/>
+<section id="comum">
+<title>Modifique arquivos</title>
+<p>Uma ideia seria comentar o Hello, World.</p>
+<listing>
+<title><file>hello.cpp</file></title>
+<code><![CDATA[
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	// Parte que mostra a mensagem
+	cout << "Olá, mundo!" << endl; // endl é fim de linha
+	// O retorno 0 indica sucesso
+	return 0;
+}]]></code>
+</listing>
+</section>
+<section id="terminal">
+<title>Modo terminal</title>
+<steps>
+<item><p>Digite <cmd>git add <var>hello.cpp</var></cmd> ou, em vez de <var>hello.cpp</var>, o(s) nome(s) do(s) arquivos a colocar no stage.
+Você já sabe que <cmd>git add .</cmd> adiciona todos os arquivos do diretório.</p>
+</item>
+<item><p>Digite <cmd>git diff --cached</cmd>. Deve aparecer algo parecido com isso:</p>
+<screen>
+$ <input>git diff --cached</input>
+<output><![CDATA[diff --git a/hello.cpp b/hello.cpp
+index 39f71c6..a71cd14 100644
+--- a/hello.cpp
++++ b/hello.cpp
+@@ -3,6 +3,8 @@ using namespace std;
+ 
+ int main()
+ {
+-       cout << "Olá, mundo!" << endl;
++       // Parte que mostra a mensagem
++       cout << "Olá, mundo!" << endl; // endl é fim de linha
++       // O retorno 0 indica sucesso
+        return 0;
+ }]]>
+</output></screen>
+</item>
+<item><p>As linhas que começam com + foram adicionadas. As que começam com - foram removidas.</p></item>
+<item><p>Após conferir as mudanças, pode dar o commit como de costume.</p></item>
+</steps>
+</section>
+<section id="gitg">
+<title>Modo gráfico com gitg</title>
+<p>
+Com o <app>gitg</app> aberto, após realizar as modificações, faça o seguinte:
+</p>
+<steps>
+<item><p>Clique na aba <gui style="tab">Commit</gui>.</p></item>
+<item><p>Arraste os arquivos de <gui>Unstaged</gui> para <gui>Staged</gui>.</p></item>
+<item><p>Clique no arquivo do stage para ver as modificações realizadas.</p>
+<figure>
+  <title>Visão das modificações</title>
+  <desc>As linhas que começam com + foram adicionadas. As que começam com - foram removidas.</desc>
+  <media type="image" src="telas/diff.png" />
+</figure>
+</item>
+<item><p>Após conferir as mudanças, pode-se fazer a rotina de commit como de costume.</p></item>
+</steps>
+</section>
+</page>
