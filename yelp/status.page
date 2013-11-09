@@ -2,7 +2,7 @@
       type="topic"
       id="status">
 <info>
-  <!--link type="guide" xref="index#sozinho"/-->
+  <link type="guide" xref="index#sozinho"/>
   <desc>Durante a utilização do git, é interessante acompanhar seu estado atual.</desc>
   <link type="next" xref="user" />
 </info>

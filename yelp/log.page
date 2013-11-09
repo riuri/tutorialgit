@@ -2,12 +2,13 @@
       type="topic"
       id="log">
 <info>
-  <!--link type="guide" xref="index#sozinho"/-->
+  <link type="guide" xref="index#sozinho"/>
   <desc>Confira o histórico de modificações</desc>
   <!--link type="next" xref="log" /-->
 </info>
 <title>Histórico</title>
 <p>Em algum momento do desenvolvimento pode ser interessante ver o que já foi modificado nos arquivos. O git pode mostrar o histórico dessas modificações para consultas.</p>
+<links type="section" />
 <section id="terminal">
 <title>Modo terminal</title>
 <p>A qualquer momento você pode ver o histórico de mudanças digitando</p>

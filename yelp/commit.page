@@ -2,7 +2,7 @@
       type="topic"
       id="commit">
 <info>
-  <!--link type="guide" xref="index#sozinho"/-->
+  <link type="guide" xref="index#sozinho" />
   <desc>A cada mudança relevante, um commit</desc>
   <link type="next" xref="diff" />
 </info>

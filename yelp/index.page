@@ -10,6 +10,7 @@
   <desc>Um pequeno tutorial para usar o git para backups de códigos na EDROM.</desc>
 </info>
 <title>Mini Tutorial de git</title>
+<p>Inicie o tutorial em <link xref="init"/>.</p>
 <section id="sozinho">
 <title>Trabalhando Sozinho</title>
 </section>
