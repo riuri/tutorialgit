@@ -4,7 +4,7 @@
 <info>
   <!--link type="guide" xref="index#sozinho"/-->
   <desc>Experimente fazer edições e ver o que foi modificado antes do commit</desc>
-  <!--link type="next" xref="add" /-->
+  <link type="next" xref="log" />
 </info>
 <title>Vendo diferenças</title>
 <p>Para este mini-tutorial, edite alguns arquivos e repita o procedimento de commit. Assim, poderemos ver mudanças ao adicionar arquivos ao stage.

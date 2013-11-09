@@ -1,0 +1,34 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="log">
+<info>
+  <!--link type="guide" xref="index#sozinho"/-->
+  <desc>Confira o histórico de modificações</desc>
+  <!--link type="next" xref="log" /-->
+</info>
+<title>Histórico</title>
+<p>Em algum momento do desenvolvimento pode ser interessante ver o que já foi modificado nos arquivos. O git pode mostrar o histórico dessas modificações para consultas.</p>
+<section id="terminal">
+<title>Modo terminal</title>
+<p>A qualquer momento você pode ver o histórico de mudanças digitando</p>
+<screen>$ <input>git log</input></screen>
+<p>Se você quiser ver as modificações em cada passo, digite</p>
+<screen>$ <input>git log -p</input></screen>
+<p>Frequentemente uma visão geral é útil para sentir o que foi mudado</p>
+<screen>$ <input>git log --stat --summary</input></screen>
+</section>
+<section id="gitg">
+<title>Modo gráfico com gitg</title>
+<steps>
+<item><p>Abra o <app>gitg</app>.</p></item>
+<item><p>Clique na aba <gui style="tab">Histórico</gui>.</p></item>
+<item><p>Clique em um item do histórico.</p></item>
+<item><p>Explore as abas embaixo.</p></item>
+</steps>
+<figure>
+  <title>Janela de Histórico</title>
+  <desc>Esta janela mostra o histórico de modificações do git.</desc>
+  <media type="image" src="telas/log.png" />
+</figure>
+</section>
+</page>
