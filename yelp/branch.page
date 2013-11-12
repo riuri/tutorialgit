@@ -1,0 +1,78 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="branch">
+<info>
+  <link type="guide" xref="index#branch"/>
+  <desc>Crie ramificações para testar ideias.</desc>
+  <link type="next" xref="commit" />
+</info>
+<title>Criando e editando um branch</title>
+<p>Dá para criar linhas de edição separadas, que são chamadas branches. Elas são úteis para testar ideias que poderão ou não serem adicionadas a outra linha de edição. Vejamos como criar e trocar de branch.
+</p>
+<links type="section"/>
+<section id="terminal">
+<title>Modo terminal</title>
+<p>No diretório acompanhado pelo git, faça o seguinte:</p>
+<steps>
+<item><p>Digite <cmd>git branch <var>experimental</var></cmd>. O git cria um branch chamado <var>experimental</var>.</p></item>
+<item><p>Para listar todos os branches locais, digite <cmd>git branch</cmd>.</p>
+<screen>
+$ <input>git branch</input>
+<output>  <var>experimental</var>
+* master</output>
+</screen>
+<p>O asterisco indica que você está agora no branch master, que é o branch inicial. O branch <var>experimental</var> é o que você acabou de criar.</p>
+</item>
+<item><p>Para mudar para o branch recém criado e fazer alterações nele, digite <cmd>git checkout <var>experimental</var></cmd>.</p></item>
+<item><p>Neste tutorial, modifique a linha do <code>return 0;</code> para, sei lá, <code>return 5-5;</code>, assim:</p>
+<listing>
+<title><file>hello.cpp</file></title>
+<code><![CDATA[
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	// Parte que mostra a mensagem
+	cout << "Olá, mundo!" << endl; // endl é fim de linha
+	// O retorno 0 indica sucesso
+	return 5-5;
+}
+]]>
+</code>
+</listing>
+</item>
+<item><p>Faça o commit como de costume.</p></item>
+<item><p>Volte para o branch master com <cmd>git checkout master</cmd>. Observe que o arquivo <file>hello.cpp</file> voltou a como estava antes.</p></item>
+<item><p>Neste tutorial, mude, sei lá, a linha do <code><![CDATA[cout << "Olá, mundo!" << endl;]]></code> de modo que ele fique assim:</p>
+<listing>
+<title><file>hello.cpp</file></title>
+<code><![CDATA[
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	// Parte que mostra a mensagem
+	cout << "Olá, mundo!\n";
+	// O retorno 0 indica sucesso
+	return 0;
+}]]></code>
+</listing>
+</item>
+<item><p>Faça o commit como de costume.</p></item>
+<item><p>Digite <cmd>git merge <var>experimental</var></cmd>. Isso pega as mudanças feitas no branch <var>experimental</var> e as junta no branch atual.</p>
+<note><p>Pode ser necessário resolver conflitos se houver mudanças nas mesmas partes. Nesse caso, digite <cmd>git diff</cmd>, resolva os conflitos manualmente e dê commit.</p></note>
+</item>
+<item><p>Nesse ponto, pode-se remover o branch <var>experimental</var> digitando <cmd>git branch -d <var>experimental</var></cmd>.</p></item>
+</steps>
+<p>Branches são fáceis de serem criados, editados e removidos, então eles costumam ser bons jeitos de testar uma ideia nova.</p>
+</section>
+<section id="gitg">
+<title>Modo gráfico com gitg</title>
+<p>Criar branches é igualmente fácil no modo gráfico. Vamos fazer o mesmo roteiro:</p>
+<steps>
+<item><p>Na aba <gui style="tab">Histórico</gui>, clique com o botão direito no último commite e escolha <gui>Criar branch</gui></p></item>
+</steps>
+</section>
+</page>
