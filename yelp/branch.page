@@ -72,7 +72,56 @@ int main()
 <title>Modo gráfico com gitg</title>
 <p>Criar branches é igualmente fácil no modo gráfico. Vamos fazer o mesmo roteiro:</p>
 <steps>
-<item><p>Na aba <gui style="tab">Histórico</gui>, clique com o botão direito no último commite e escolha <gui>Criar branch</gui></p></item>
+<item><p>Na aba <gui style="tab">Histórico</gui>, clique com o botão direito no último commite e escolha <gui>Criar branch</gui>.</p></item>
+<item><p>Digite o nome do branch, nesse caso, <var>experimental</var>.</p></item>
+<item><p>Agora você pode ver o branch que acabou de criar.</p>
+<figure>
+  <title>Criando um branch local</title>
+  <desc>Esta tela mostra os branches presentes</desc>
+  <media type="image" src="telas/branch.png" />
+</figure>
+</item>
+<item><p>Para mudar para o branch recém criado e fazer alterações nele, clique com o botão direito do mouse em cima de <gui><var>experimental</var></gui> e clique em <gui style="menu">Checkout em cópia de trabalho</gui>.</p>
+<note><p>Pode ser necessário atualizar o gitg no menu <guiseq><gui>Visualizar</gui><gui>Atualizar</gui></guiseq> ou apertando <keyseq><key>Ctrl</key><key>R</key></keyseq>.</p></note>
+</item>
+<item><p>Neste tutorial, modifique a linha do <code>return 0;</code> para, sei lá, <code>return 5-5;</code>, igual ao tutorial do terminal.</p></item>
+<item><p>Faça o commit como de costume.</p>
+<figure>
+  <title>Tela após o commit em <var>experimental</var></title>
+  <media type="image" src="telas/branch-experimental.png" />
+</figure>
+</item>
+<item><p>Volte para o branch master clicando com o botão direito em <gui>master</gui> e clicando em <gui style="menu">Checkout em cópia de trabalho</gui>. Observe que o arquivo <file>hello.cpp</file> voltou a como estava antes.</p></item>
+<item><p>Neste tutorial, mude, sei lá, a linha do <code><![CDATA[cout << "Olá, mundo!" << endl;]]></code> de modo que ele fique assim:</p>
+<listing>
+<title><file>hello.cpp</file></title>
+<code><![CDATA[
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	// Parte que mostra a mensagem
+	cout << "Olá, mundo!\n";
+	// O retorno 0 indica sucesso
+	return 0;
+}]]></code>
+</listing>
+</item>
+<item><p>Faça o commit como de costume.</p>
+<figure>
+  <title>Tela após o commit em master</title>
+  <media type="image" src="telas/branch-master.png" />
+</figure>
+</item>
+<!--item><p>Clique no menu popup ao lado de <gui>Branch:</gui> e escolha <gui>Todos os branches</gui>.</p>
+<figure>
+  <title>Tela de todos os branches</title>
+  <media type="image" src="telas/branches.png" />
+</figure>
+</item-->
+<item><p>Clique com o botão direito sobre <gui>master</gui> e clique no menu <guiseq><gui>Mesclar branch com...</gui><gui>experimental</gui></guiseq>.</p>
+</item>
 </steps>
 </section>
 </page>
