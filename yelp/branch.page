@@ -4,7 +4,7 @@
 <info>
   <link type="guide" xref="index#branch"/>
   <desc>Crie ramificações para testar ideias.</desc>
-  <link type="next" xref="commit" />
+  <!--link type="next" xref="commit" /-->
 </info>
 <title>Criando e editando um branch</title>
 <p>Dá para criar linhas de edição separadas, que são chamadas branches. Elas são úteis para testar ideias que poderão ou não serem adicionadas a outra linha de edição. Vejamos como criar e trocar de branch.
@@ -113,13 +113,13 @@ int main()
   <title>Tela após o commit em master</title>
   <media type="image" src="telas/branch-master.png" />
 </figure>
-</item>
-<!--item><p>Clique no menu popup ao lado de <gui>Branch:</gui> e escolha <gui>Todos os branches</gui>.</p>
+<note><p>A qualquer momento, você pode clicar no menu popup ao lado de <gui>Branch:</gui> e escolher <gui>Todos os branches</gui>.</p>
 <figure>
   <title>Tela de todos os branches</title>
   <media type="image" src="telas/branches.png" />
 </figure>
-</item-->
+</note>
+</item>
 <item><p>Clique com o botão direito sobre <gui>master</gui> e clique no menu <guiseq><gui>Mesclar branch com...</gui><gui>experimental</gui></guiseq>.</p>
 </item>
 </steps>

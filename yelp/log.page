@@ -4,7 +4,7 @@
 <info>
   <link type="guide" xref="index#sozinho"/>
   <desc>Confira o histórico de modificações</desc>
-  <!--link type="next" xref="log" /-->
+  <link type="next" xref="branch" />
 </info>
 <title>Histórico</title>
 <p>Em algum momento do desenvolvimento pode ser interessante ver o que já foi modificado nos arquivos. O git pode mostrar o histórico dessas modificações para consultas.</p>
