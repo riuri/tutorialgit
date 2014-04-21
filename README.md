@@ -8,8 +8,11 @@ Visualização
 
 Para visualizar, o usuário deve ter o yelp instalado. Pode usar uma das alternativas:
 * Diretamente no yelp
-  Digite `yelp yelp` no diretório raiz da distribuição.
+
+    1. Digite `yelp yelp` no diretório raiz da distribuição.
   
 * No navegador
-  Digite `./a` no diretório da distribuição.
-  Abra `html/index.html` no navegador de sua preferência.
+
+    1. Digite `./a` no diretório da distribuição.
+
+    2. Abra `html/index.html` no navegador de sua preferência.
