@@ -1,0 +1,160 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Criando e editando um branch</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="jquery.js"></script><script type="text/javascript" src="jquery.syntax.js"></script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><div class="page" role="main">
+<div class="header"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="index.html" title="Mini Tutorial de git">Mini Tutorial de git</a> › <a class="trail" href="index.html#branch" title="Criando Ramificações">Criando Ramificações</a> » </div></div></div>
+<div class="body">
+<div class="links nextlinks"><a class="nextlinks-prev" href="log.html" title="Histórico">Previous</a></div>
+<div class="hgroup"><h1 class="title"><span class="title">Criando e editando um branch</span></h1></div>
+<div class="region">
+<div class="contents">
+<p class="p">Dá para criar linhas de edição separadas, que são chamadas branches. Elas são úteis para testar ideias que poderão ou não serem adicionadas a outra linha de edição. Vejamos como criar e trocar de branch.
+</p>
+<div role="navigation" class="links sectionlinks"><div class="inner"><div class="region"><ul>
+<li class="links "><a href="branch.html#terminal" title="Modo terminal">Modo terminal</a></li>
+<li class="links "><a href="branch.html#gitg" title="Modo gráfico com gitg">Modo gráfico com gitg</a></li>
+</ul></div></div></div>
+</div>
+<div id="terminal" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">Modo terminal</span></h2></div>
+<div class="region"><div class="contents">
+<p class="p">No diretório acompanhado pelo git, faça o seguinte:</p>
+<div class="steps"><div class="inner"><div class="region"><ol class="steps">
+<li class="steps"><p class="p">Digite <span class="cmd">git branch <span class="var">experimental</span></span>. O git cria um branch chamado <span class="var">experimental</span>.</p></li>
+<li class="steps">
+<p class="p">Para listar todos os branches locais, digite <span class="cmd">git branch</span>.</p>
+<div class="screen"><pre class="contents ">$ <span class="input">git branch</span>
+<span class="output">  <span class="var">experimental</span>
+* master</span></pre></div>
+<p class="p">O asterisco indica que você está agora no branch master, que é o branch inicial. O branch <span class="var">experimental</span> é o que você acabou de criar.</p>
+</li>
+<li class="steps"><p class="p">Para mudar para o branch recém criado e fazer alterações nele, digite <span class="cmd">git checkout <span class="var">experimental</span></span>.</p></li>
+<li class="steps">
+<p class="p">Neste tutorial, modifique a linha do <span class="code">return 0;</span> para, sei lá, <span class="code">return 5-5;</span>, assim:</p>
+<div class="listing"><div class="inner">
+<div class="title title-listing"><h3><span class="title"><span class="file">hello.cpp</span></span></h3></div>
+<div class="region"><div class="contents"><div class="code"><pre class="contents ">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+	// Parte que mostra a mensagem
+	cout &lt;&lt; "Olá, mundo!" &lt;&lt; endl; // endl é fim de linha
+	// O retorno 0 indica sucesso
+	return 5-5;
+}
+</pre></div></div></div>
+</div></div>
+</li>
+<li class="steps"><p class="p">Faça o commit como de costume.</p></li>
+<li class="steps"><p class="p">Volte para o branch master com <span class="cmd">git checkout master</span>. Observe que o arquivo <span class="file">hello.cpp</span> voltou a como estava antes.</p></li>
+<li class="steps">
+<p class="p">Neste tutorial, mude, sei lá, a linha do <span class="code">cout &lt;&lt; "Olá, mundo!" &lt;&lt; endl;</span> de modo que ele fique assim:</p>
+<div class="listing"><div class="inner">
+<div class="title title-listing"><h3><span class="title"><span class="file">hello.cpp</span></span></h3></div>
+<div class="region"><div class="contents"><div class="code"><pre class="contents ">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+	// Parte que mostra a mensagem
+	cout &lt;&lt; "Olá, mundo!\n";
+	// O retorno 0 indica sucesso
+	return 0;
+}</pre></div></div></div>
+</div></div>
+</li>
+<li class="steps"><p class="p">Faça o commit como de costume.</p></li>
+<li class="steps">
+<p class="p">Digite <span class="cmd">git merge <span class="var">experimental</span></span>. Isso pega as mudanças feitas no branch <span class="var">experimental</span> e as junta no branch atual.</p>
+<div class="note" title="Note"><div class="inner"><div class="region"><div class="contents"><p class="p">Pode ser necessário resolver conflitos se houver mudanças nas mesmas partes. Nesse caso, digite <span class="cmd">git diff</span>, resolva os conflitos manualmente e dê commit.</p></div></div></div></div>
+</li>
+<li class="steps"><p class="p">Nesse ponto, pode-se remover o branch <span class="var">experimental</span> digitando <span class="cmd">git branch -d <span class="var">experimental</span></span>.</p></li>
+</ol></div></div></div>
+<p class="p">Branches são fáceis de serem criados, editados e removidos, então eles costumam ser bons jeitos de testar uma ideia nova.</p>
+</div></div>
+</div></div>
+<div id="gitg" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">Modo gráfico com gitg</span></h2></div>
+<div class="region"><div class="contents">
+<p class="p">Criar branches é igualmente fácil no modo gráfico. Vamos fazer o mesmo roteiro:</p>
+<div class="steps"><div class="inner"><div class="region"><ol class="steps">
+<li class="steps"><p class="p">Na aba <span class="gui">Histórico</span>, clique com o botão direito no último commite e escolha <span class="gui">Criar branch</span>.</p></li>
+<li class="steps"><p class="p">Digite o nome do branch, nesse caso, <span class="var">experimental</span>.</p></li>
+<li class="steps">
+<p class="p">Agora você pode ver o branch que acabou de criar.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h3><span class="title">Criando um branch local</span></h3></div>
+<div class="region">
+<div class="contents"><div class="media media-image"><div class="inner"><img src="telas/branch.png" class="media media-block" alt=""></div></div></div>
+<div class="desc">Esta tela mostra os branches presentes</div>
+</div>
+</div></div>
+</li>
+<li class="steps">
+<p class="p">Para mudar para o branch recém criado e fazer alterações nele, clique com o botão direito do mouse em cima de <span class="gui"><span class="var">experimental</span></span> e clique em <span class="gui">Checkout em cópia de trabalho</span>.</p>
+<div class="note" title="Note"><div class="inner"><div class="region"><div class="contents"><p class="p">Pode ser necessário atualizar o gitg no menu <span class="guiseq"><span class="gui">Visualizar</span> ▸ <span class="gui">Atualizar</span></span> ou apertando <span class="keyseq"><span class="key"><kbd>Ctrl</kbd></span>+<span class="key"><kbd>R</kbd></span></span>.</p></div></div></div></div>
+</li>
+<li class="steps"><p class="p">Neste tutorial, modifique a linha do <span class="code">return 0;</span> para, sei lá, <span class="code">return 5-5;</span>, igual ao tutorial do terminal.</p></li>
+<li class="steps">
+<p class="p">Faça o commit como de costume.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h3><span class="title">Tela após o commit em <span class="var">experimental</span></span></h3></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="telas/branch-experimental.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+</li>
+<li class="steps"><p class="p">Volte para o branch master clicando com o botão direito em <span class="gui">master</span> e clicando em <span class="gui">Checkout em cópia de trabalho</span>. Observe que o arquivo <span class="file">hello.cpp</span> voltou a como estava antes.</p></li>
+<li class="steps">
+<p class="p">Neste tutorial, mude, sei lá, a linha do <span class="code">cout &lt;&lt; "Olá, mundo!" &lt;&lt; endl;</span> de modo que ele fique assim:</p>
+<div class="listing"><div class="inner">
+<div class="title title-listing"><h3><span class="title"><span class="file">hello.cpp</span></span></h3></div>
+<div class="region"><div class="contents"><div class="code"><pre class="contents ">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+	// Parte que mostra a mensagem
+	cout &lt;&lt; "Olá, mundo!\n";
+	// O retorno 0 indica sucesso
+	return 0;
+}</pre></div></div></div>
+</div></div>
+</li>
+<li class="steps">
+<p class="p">Faça o commit como de costume.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h3><span class="title">Tela após o commit em master</span></h3></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="telas/branch-master.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<div class="note" title="Note"><div class="inner"><div class="region"><div class="contents">
+<p class="p">A qualquer momento, você pode clicar no menu popup ao lado de <span class="gui">Branch:</span> e escolher <span class="gui">Todos os branches</span>.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h3><span class="title">Tela de todos os branches</span></h3></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="telas/branches.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+</div></div></div></div>
+</li>
+<li class="steps"><p class="p">Clique com o botão direito sobre <span class="gui">master</span> e clique no menu <span class="guiseq"><span class="gui">Mesclar branch com...</span> ▸ <span class="gui">experimental</span></span>.</p></li>
+</ol></div></div></div>
+</div></div>
+</div></div>
+<div class="links nextlinks"><a class="nextlinks-prev" href="log.html" title="Histórico">Previous</a></div>
+<div class="sect sect-links" role="navigation">
+<div class="hgroup"></div>
+<div class="contents"><div class="links guidelinks"><div class="inner">
+<div class="title"><h2><span class="title">More Information</span></h2></div>
+<div class="region"><ul><li class="links "><a href="index.html#branch" title="Criando Ramificações">Criando Ramificações</a></li></ul></div>
+</div></div></div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="footer"></div>
+</div></body>
+</html>
